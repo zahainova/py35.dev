@@ -1,4 +1,4 @@
-venv\Scripts\activate.bat
+
 
 company_name = "My company"
 
