@@ -78,6 +78,18 @@ def remove_contact(contact):
     if confirm.lower() in ('yes', 'y'):
         contacts.pop(index)
 
+def update_contact(contact):
+    old_phone_number = contact['phone_number']
+    old_first_name = contact['first_name']
+    old_last_name = contact['last_name']
+
+    first_name = input(f"Enter first name: ({old_first_name}) >>> ").strip().lower() or old_first_name
+    last_name = input(f"Enter last name: ({old_last_name}) >>> ").strip().lower() or old_last_name
+    phone_number = input(f"Enter phone number: ({old_phone_number}) >>> ").strip() or old_phone_number 
+
+    return {'first_name': first_name.lower(), 'last_name': last_name.lower(), 'phone_number': phone_number}
+
+
 def main():
     hi()
 
@@ -88,7 +100,8 @@ def main():
            case 'l':
                contact_list()
            case 'u':
-               pass
+               contact = lookup_contact(name)
+               contact.update(update_contact(contact))
            case 'r':
                name = input("What name You looking for:")
                contact = lookup_contact(name)
