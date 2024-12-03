@@ -100,6 +100,7 @@ def main():
            case 'l':
                contact_list()
            case 'u':
+               name = input("What name You looking for:")
                contact = lookup_contact(name)
                contact.update(update_contact(contact))
            case 'r':
