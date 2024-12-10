@@ -156,5 +156,5 @@ import sys
 #    print(f"You must specify the database name")
 #    raise SystemExit(1)
 
-
-main()
+if __name__ == "__main__":
+     main()
