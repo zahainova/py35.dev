@@ -11,8 +11,8 @@ def palindrom(num):
     if num == rev_num:
         return num
     else:
-        return False 
-
+        return False
+    
 def infinite_s():
     n = 0
     while True:
